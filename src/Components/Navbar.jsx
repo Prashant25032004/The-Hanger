@@ -9,19 +9,18 @@ const Navbar = () => {
     <nav className="bg-[#EBE8E3]">
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
         {/* Logo */}
-        <div className="flex items-center w-32 h-14 space-x-2">
+        <Link to="/"  className="flex items-center w-32 h-14 space-x-2">
           <img
             src="./the logo.png"
             alt="logo"
             className="w-full h-full object-cover" // 🔥 thoda bada logo
           />
-        </div>
+        </Link>
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
           <Link to="/" className="text-[#b58b3a] cursor-pointer">Home</Link>
-          <Link to="/shop" className="cursor-pointer hover:text-black">Shop</Link>
-          <Link to="/pages" className="cursor-pointer hover:text-black">Pages</Link>
+          <Link to="/wardrobe" className="cursor-pointer hover:text-black">Wardrobe</Link>
           <Link to="/contact" className="cursor-pointer hover:text-black">Contact Us</Link>
           <li className="cursor-pointer hover:text-black flex items-center">
             Cart{" "}

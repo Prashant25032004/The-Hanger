@@ -3,8 +3,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" text-white pt-12 h-fit bg-[#b8945e]">
-      <div className="max-w-7xl  p-12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
+    <footer className="text-white pt-12 h-fit bg-[#b8945e]">
+      <div className="max-w-7xl p-12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
         
         {/* Address Section */}
         <div>
@@ -22,16 +22,16 @@ const Footer = () => {
               placeholder="Enter email here"
               className="py-1 px-3 w-full bg-white rounded-lg text-black outline-none"
             />
-            <button className="bg-white text-[#b8945e] rounded-xl px-6 font-medium">
+            <button className="bg-white text-[#b8945e] rounded-xl px-6 font-medium hover:bg-[#e2e2e2] transition">
               Submit
             </button>
           </div>
         </div>
 
         {/* Pages Section */}
-        <div className="">
-          <h3 className="font-semibold mb-3 ">Pages</h3>
-          <ul className="space-y-2 ">
+        <div>
+          <h3 className="font-semibold mb-3">Pages</h3>
+          <ul className="space-y-2">
             <li>Home</li>
             <li>Home 2</li>
             <li>Shop</li>
@@ -66,8 +66,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="text-center text-sm mt-10 ">
-        © All rights reserved by prahsant "voh ek gandu hai"
+      <div className="text-center text-sm mt-10 pb-6">
+        © {new Date().getFullYear()} All rights reserved by <span className="font-semibold">The Hanger Store</span>
       </div>
     </footer>
   );

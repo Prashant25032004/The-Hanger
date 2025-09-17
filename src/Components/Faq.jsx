@@ -48,39 +48,43 @@ const FAQ = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#f5f2eb] py-16 px-6">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
-        Frequently asked questions
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#f5f2eb] py-12 px-4 sm:px-6 md:px-10">
+      {/* Title */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8 sm:mb-10 text-center">
+        Frequently Asked Questions
       </h2>
 
+      {/* FAQ Box */}
       <div className="w-full max-w-3xl space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-white shadow-sm border border-gray-200 rounded-md p-5"
+            className="bg-white shadow-sm border border-gray-200 rounded-lg p-4 sm:p-5"
           >
             {/* Header */}
             <div
               className="flex justify-between items-center cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900">
                 {faq.question}
               </h3>
               {openIndex === index ? (
-                <X className="w-6 h-6 text-gray-700" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
               ) : (
-                <Plus className="w-6 h-6 text-gray-700" />
+                <Plus className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
               )}
             </div>
 
             {/* Animated Content */}
             <div
               className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                openIndex === index ? "max-h-40 mt-4" : "max-h-0"
+                openIndex === index ? "max-h-48 mt-3 sm:mt-4" : "max-h-0"
               }`}
             >
-              <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                {faq.answer}
+              </p>
             </div>
           </div>
         ))}

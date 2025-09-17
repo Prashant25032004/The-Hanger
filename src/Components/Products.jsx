@@ -63,8 +63,10 @@ const Products = () => {
 
   return (
     <div className="bg-[#f8f6f2] py-12">
-      <h2 className="text-center text-5xl font-bold mb-10">Just restocked</h2>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-6">
+      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
+        Just restocked
+      </h2>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 px-4 sm:px-6">
         {items.map((item) => (
           <div key={item.id} className="text-center">
             <img
@@ -72,9 +74,15 @@ const Products = () => {
               alt={item.title}
               className="w-full aspect-[3/4] object-cover rounded-lg shadow-sm"
             />
-            <h3 className="mt-4 text-lg font-semibold">{item.title}</h3>
-            <p className="text-base font-medium text-black">{item.price}</p>
-            <p className="line-through text-gray-400">{item.oldPrice}</p>
+            <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold">
+              {item.title}
+            </h3>
+            <p className="text-sm sm:text-base font-medium text-black">
+              {item.price}
+            </p>
+            <p className="line-through text-gray-400 text-sm sm:text-base">
+              {item.oldPrice}
+            </p>
           </div>
         ))}
       </div>

@@ -4,10 +4,10 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="text-white pt-12 h-fit bg-[#b8945e]">
-      <div className="max-w-7xl p-12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
+      <div className="max-w-7xl p-12 mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 px-6">
         
         {/* Address Section */}
-        <div>
+        <div className="col-span-2">
           <p className="mb-2">
             1810 Stone Canyon Rd Longmont, <br />
             Colorado(CO), 80503

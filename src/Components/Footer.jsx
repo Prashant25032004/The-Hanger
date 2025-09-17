@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="text-white pt-12 h-fit bg-[#b8945e]">
-      <div className="max-w-7xl p-12 mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 px-6">
+      <div className="max-w-7xl sm:p-4  md:p-12 mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 px-6">
         
         {/* Address Section */}
         <div className="col-span-2">

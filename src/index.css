@@ -6,6 +6,7 @@
 }
 
 
+
 .font-script {
   font-family: 'Great Vibes', cursive;
 }
@@ -20,4 +21,9 @@
 li:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+
+body {
+  font-family: 'Gilroy', sans-serif;
 }

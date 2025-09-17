@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/Gilroy-Regular.ttf') format('truetype'); 
+}
+
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-greatVibes {
+  font-family: 'Great Vibes', cursive;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

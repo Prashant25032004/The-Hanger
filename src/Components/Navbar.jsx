@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="bg-[#EBE8E3]">
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
         {/* Logo */}
-        <Link to="/"  className="flex items-center w-32 h-14 space-x-2">
+        <Link to="/" className="flex items-center w-32 h-14 space-x-2">
           <img
             src="./the logo.png"
             alt="logo"
@@ -43,11 +43,13 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-[#EBE8E3] border-t border-gray-200">
           <ul className="flex flex-col space-y-4 p-4 text-gray-700 font-medium">
-            <li><a href="#" className="hover:text-gray-900">Home</a></li>
-            <li><a href="#" className="hover:text-gray-900">Shop</a></li>
-            <li><a href="#" className="hover:text-gray-900">Pages</a></li>
-            <li><a href="#" className="hover:text-gray-900">Contact Us</a></li>
-            <li><a href="#" className="hover:text-gray-900">Cart</a></li>
+            <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-gray-900">Home</Link>
+            <Link to="/wardrobe" onClick={() => setIsOpen(false)} className="hover:text-gray-900">Wardrobe</Link>
+            <Link to="/contact" onClick={() => setIsOpen(false)} className="hover:text-gray-900">Contact Us</Link>
+            <Link to="/cart" onClick={() => setIsOpen(false)} className="hover:text-gray-900 flex items-center">
+              Cart
+              <span className="ml-1 bg-gray-200 px-2 py-0.5 rounded-full text-xs">0</span>
+            </Link>
           </ul>
         </div>
       )}

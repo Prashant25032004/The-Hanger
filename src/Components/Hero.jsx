@@ -2,22 +2,35 @@
 import React from "react";
 import Products from "./Products";
 import FAQ from "./Faq";
+import Features from "./Features";
 
 const Home = () => {
   return (
     <>
       <div className="font-[Gilroy] bg-[#EBE8E3]">
         {/* Hero Section */}
-        <section className="bg-[#d9c4aa] min-h-[70vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-10 md:py-16 gap-8">
+        <section
+          className="relative min-h-[80vh] sm:h-[26vw] mt-8 flex flex-col md:flex-row 
+          items-center justify-between px-4 sm:px-6 md:px-16 
+          bg-gradient-to-r from-[#e6d2b5] via-[#f4eee6] to-[#e6d2b5] 
+          rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden"
+        >
+          {/* Floating Abstract Shape (left) */}
+          <div className="absolute -top-28 -left-28 w-52 sm:w-72 h-52 sm:h-72 bg-[#d1b28a] rounded-full blur-[100px] opacity-40"></div>
+
+          {/* Floating Abstract Shape (right) */}
+          <div className="absolute -bottom-28 -right-28 w-64 sm:w-96 h-64 sm:h-96 bg-[#c19a6b] rounded-full blur-[120px] opacity-30"></div>
+
           {/* Left Text */}
-          <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold text-gray-900 leading-tight">
-              Up to 40% Off for <br /> the Festival Season
+          <div className="w-full md:w-1/2 space-y-4 text-center md:text-left mt-10 relative z-10 px-2">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
+              Elevate Your Style <br /> This{" "}
+              <span className="text-[#b8945e]">Festival</span>
             </h2>
 
             {/* Rating */}
             <div className="flex items-center justify-center md:justify-start space-x-2">
-              <div className="flex text-yellow-500">
+              <div className="flex text-yellow-500 text-base sm:text-lg">
                 {Array(5)
                   .fill()
                   .map((_, i) => (
@@ -30,47 +43,29 @@ const Home = () => {
             </div>
 
             {/* Description */}
-            <p className="text-gray-700 text-sm sm:text-base">
-              If you are going to use a passage of Lorem Ipsum, you need to be
-              sure there isn't anything embarrassing hidden in the middle.
+            <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-md mx-auto md:mx-0">
+              Discover the latest wardrobe essentials crafted for comfort and
+              elegance. Designed to make every moment special.
             </p>
-
-            {/* Button */}
-            <button className="bg-black text-white px-6 py-2 mt-4 hover:bg-gray-800 transition">
-              Shop now!
-            </button>
           </div>
 
           {/* Right Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 flex justify-center relative mt-8 md:mt-0">
+            {/* Glow behind image */}
+            <div className="absolute w-[240px] sm:w-[320px] md:w-[520px] h-[240px] sm:h-[320px] md:h-[520px] rounded-full bg-[#e0c7a7] blur-3xl opacity-60 top-1/2 -translate-y-1/2"></div>
+
             <img
               src="./girl.png"
               alt="shopping girl"
-              className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] object-contain"
+              className="w-full max-w-[220px] sm:max-w-[320px] md:max-w-[520px] object-contain relative z-10 drop-shadow-2xl"
             />
           </div>
         </section>
-
-        {/* Shipping Info */}
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 bg-white px-6 md:px-12 py-4 text-xs sm:text-sm text-center sm:text-left">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/3082/3082027.png"
-            alt="truck"
-            className="w-5 h-5"
-          />
-          <p className="text-gray-800">
-            <span className="font-semibold">Free Worldwide Shipping:</span> get
-            free shipping with our Special service and not redeemable for cash or
-            credit{" "}
-            <span className="text-[#b58b3a] underline cursor-pointer">
-              See Details
-            </span>
-          </p>
-        </div>
       </div>
 
       {/* Products & FAQ */}
       <Products />
+      <Features />
       <FAQ />
     </>
   );

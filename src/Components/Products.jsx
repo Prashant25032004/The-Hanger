@@ -62,25 +62,29 @@ const Products = () => {
   ];
 
   return (
-    <div className="bg-[#f8f6f2] py-12">
-      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-10">
+    <div className="bg-[#F8F6F2] py-10 sm:py-12 px-3 sm:px-6">
+      <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-bold mb-8 sm:mb-10">
         Just restocked
       </h2>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 px-4 sm:px-6">
+      <div
+        className="max-w-7xl mx-auto grid 
+        grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+        gap-5 sm:gap-6 md:gap-8"
+      >
         {items.map((item) => (
           <div key={item.id} className="text-center">
             <img
               src={item.img}
               alt={item.title}
-              className="w-full aspect-[3/4] object-cover rounded-lg shadow-sm"
+              className="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-lg transition"
             />
-            <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold">
+            <h3 className="mt-2 sm:mt-3 text-sm sm:text-base md:text-lg font-semibold">
               {item.title}
             </h3>
             <p className="text-sm sm:text-base font-medium text-black">
               {item.price}
             </p>
-            <p className="line-through text-gray-400 text-sm sm:text-base">
+            <p className="line-through text-gray-400 text-xs sm:text-sm md:text-base">
               {item.oldPrice}
             </p>
           </div>
